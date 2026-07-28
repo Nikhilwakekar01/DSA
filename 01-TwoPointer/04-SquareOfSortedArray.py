@@ -56,14 +56,7 @@ for i in range(len(a)):
         neg.append(a[i]*a[i])
     else:
         pos.append(a[i]*a[i])
-print(neg)
-print(pos)
-
-
-
 neg.reverse()
-print(neg)
-
 s=[]
 k=0
 i=0
@@ -76,7 +69,6 @@ while(i<len(neg) and j<len(pos)):
     elif(neg[i]<pos[j]):
         s.append(neg[i])
         i+=1
-print(s)
 
 if(i!=len(neg)):
     s.append(neg[i])

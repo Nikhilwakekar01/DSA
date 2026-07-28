@@ -34,19 +34,19 @@
 
 
 
-num = [2,7,11,15]
+numbers = [2,7,11,15]
 target = 9
 
 i=0
-j=len(num)-1
+j=len(numbers)-1
 
 while(i<j):
-    if(num[i]+num[j]==target):
+    if(numbers[i]+numbers[j]==target):
         print(i,j)
         break
-    elif(num[i]+num[j]>target):
+    elif(numbers[i]+numbers[j]>target):
         j-=1
-    elif(num[i]+num[j]<target):
+    elif(numbers[i]+numbers[j]<target):
         i+=1
     else:
         print("no num found = target")
