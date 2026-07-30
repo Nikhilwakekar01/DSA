@@ -1,8 +1,8 @@
-nums = [-1,2,1,-4]
+nums = [0,0,0]
 target = 1
 
 nums.sort()
-result=[]
+result_sum=0
 print(nums)
 for i in range(len(nums)-2):
     
@@ -12,14 +12,19 @@ for i in range(len(nums)-2):
         continue
     left=i+1
     right=len(nums)-1
-    sum= -1*nums[i]
+    sum= nums[i]+nums[left]+nums[right]
     max_diff=float('inf')
+
+    diff=abs(sum-target)
+    if(diff<max_diff):
+        max_diff=diff
+        result_sum=sum
 
     while(left<right):
         
         
         print("hello")
-        if(nums[left]+nums[right]==sum):
+        if(target==sum):
             diff=abs(sum-target)
             if(diff<max_diff):
                 max_diff=diff
@@ -27,17 +32,15 @@ for i in range(len(nums)-2):
             result=sum
             left+=1
             right-=1
-        elif(nums[left]+nums[right]<sum):
-           
+        elif(sum<target):
             left+=1
-        elif(nums[left]+nums[right]>sum):
-            
+        elif(sum>target):
             right-=1
 
 
 
 
 
-print(result)
+print(result_sum)
   
 
