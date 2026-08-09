@@ -3,7 +3,7 @@ s = "abcabcbb"
 
 freq={}
 
-res=float('-inf')
+res=0
 low=0
 high=0
 for high in range(len(s)):
