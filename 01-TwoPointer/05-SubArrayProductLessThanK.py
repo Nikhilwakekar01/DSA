@@ -15,6 +15,7 @@ for high in range(len(nums)):
     res=res+length
 
 print(res)
+
    
 
             
